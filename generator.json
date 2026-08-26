@@ -6,5 +6,5 @@
   "run": "node --import tsx src/generate.ts {catalog}",
   "run_example": "node --import tsx src/generate.ts demo_catalog.json",
   "output": "dependency_graph.json",
-  "notes": "The catalog path must be the LAST CLI argument (matches the provided skeleton's contract: `process.argv[process.argv.length - 1]`). Always writes dependency_graph.json to the current working directory. If OPENAI_API_KEY and OPENAI_BASE_URL are set in the environment, an additional LLM-assisted pass automatically proposes producer edges for required parameters the deterministic heuristics couldn't resolve; this is purely additive and any failure is caught so the heuristic graph is always still written."
+  "notes": "The catalog path must be the LAST CLI argument"
 }
