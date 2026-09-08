@@ -389,8 +389,7 @@ ${JSON.stringify(unresolved)}`;
     // it supplied first). The LLM only sees each candidate's OUTPUT fields, never
     // its own required inputs, so it can't apply this rule itself — e.g. it will
     // happily propose GET_A_USER (which requires `username` as input) as a producer
-    // of `username`, which is backwards. Enforce it here before merging.
-    // hello bitch
+    // of `username`, which is backwards. Enforce it here before merging.ß
     const requiredParamNamesByTool = new Map(tools.map((t) => [t.id, new Set(t.requiredInputs.map((f) => f.name))]));
     const merged = new Map(edges.map((e) => [`${e.from}=>${e.to}:${e.label}`, e]));
     let rejectedSelfReq = 0;
